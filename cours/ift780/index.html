@@ -1,184 +1,145 @@
-
-<html><head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>siteweb - ift780 R&#233;seaux neuronaux</title>
-
-
-<style>
-/* unvisited link */
-a:link { 
-    color: #000000;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFT 780 | Réseaux Neuronaux</title>
+    <link rel="stylesheet" href="../../styles.css"> 
+    <style>
+        /* Styles spécifiques au cours */
+        .course-title {
+            color: #2a6496; /* Couleur bleue typique pour un cours gradé */
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        /* Summary Box Styling (Bannière du haut pleine largeur) */
+        .course-summary-box {
+            background-color: #f8f8f8; 
+            border: 1px solid #cbcbcb;
+            padding: 20px;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+        .summary-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 30px; /* Écart vertical et horizontal */
+        }
+        .summary-item {
+            flex: 1 1 auto; /* Permet aux éléments de s'ajuster */
+            min-width: 150px; 
+        }
+        .summary-item strong {
+            color: #2a6496; /* Couleur pour les étiquettes du sommaire */
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        /* Main Content Styling */
+        .section-header {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+        .resource-table {
+    /* Retire les bordures de table HTML */
+    border-collapse: collapse; 
+    width: 100%; /* S'adapte à la largeur du conteneur */
+    margin-top: 15px;
+}
+.resource-table td {
+    /* Espacement propre dans les cellules */
+    padding: 2px 6px 2px 0;
+    /* Aligne le texte en haut des cellules multi-lignes */
+    vertical-align: top;
+    /* Assure que le texte ne se coupe pas dans les liens */
+    /* white-space: nowrap; (Retiré pour permettre aux descriptions de s'enrouler) */ 
 }
 
-/* visited link */
-a:visited {
-    color: #000000;
+/* Ligne séparatrice optionnelle pour plus de clarté */
+.resource-table tr {
+    border-bottom: 1px solid #eee;
+}
+.resource-table tr:last-child {
+    border-bottom: none;
 }
 
-/* mouse over link */
-a:hover {
-    color: #cbcbcb;
+.resource-table a {
+    /* Style les liens de manière cohérente */
+    color: #0000FF; 
+    text-decoration: underline;
+
 }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="../../index.html" class="logo">Pierre-Marc Jodoin, Ph.D.</a> 
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../../publications.html">Publications</a>
+                <a href="../../openscience.html">Open Science</a>                
+                <a href="../../cv.html">CV</a>
+                <a href="../../teaching.html" class="active">Teaching</a>
+                <a href="../../contact.html" >Contact</a>
+                <a href="https://vitalab.github.io" target="_blank">My lab</a>
 
-/* selected link */
-a:active {
-    color: #000000;
-}
+            </div>
+        </div>
+    </header>
 
-body {color:#464646;font-family:sans-serif;}
-hr {
- color: #cbcbcb;
-}
-hst {
-    text-decoration: line-through;
-}
+    <section class="container">
+        <span class="tag">Cours de cycles supérieurs (M.Sc./Ph.D.)</span>
+        <h1 class="course-title">IFT 780: Réseaux Neuronaux</h1>
+        
+        <div class="course-summary-box">
+            <h3>Sommaire</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <strong>Session</strong>
+                    Hiver 2025
+                </div>
+                <div class="summary-item">
+                    <strong>Professeur</strong>
+                    Pierre-Marc Jodoin
+                </div>
+                <div class="summary-item">
+                    <strong>Correcteur</strong>
+                    <a href="mailto:Jeremi.Levesque@USherbrooke.ca">Jeremi Lévesque</a>
+                </div>
+                <div class="summary-item">
+                    <strong>Périodes de cours</strong>
+                    Mardi de 15h30 à 17h20 <br>
+                    Jeudi de 16h30 à 17h20
+                </div>
+                <div class="summary-item">
+                    <strong>Local</strong>
+                    D3-2038
+                </div>
+                <div class="summary-item">
+                    <strong>Plan de cours</strong>
+                    <a href="https://jodoin.github.io/cours/ift780/PlanIFT780_H2025.pdf">Lien vers le Plan de cours (PDF) &rarr;</a>
+                </div>
+            </div>
+        </div>
 
-</style>
-<style type="text/css">
-@font-face {
-  font-weight: 400;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 400;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 500;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 500;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 700;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 700;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 900;
-  font-style:  normal;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2') format('woff2');
-}
-@font-face {
-  font-weight: 900;
-  font-style:  italic;
-  font-family: 'Inter-Loom';
-
-  src: url('https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.woff2') format('woff2');
-}</style></head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<!-- saved for Web Slices (siteweb.psd) -->
-<table id="Tableau_01" width="1021" height="309" border="0" cellpadding="0" cellspacing="0">
-	<tbody><tr>
-		<td>
-			<img src="./siteweb_files/index_01.jpg" width="20" height="233" alt=""></td>
-		<td colspan="8">
-			<img src="./siteweb_files/index_02.gif" width="979" height="233" alt=""></td>
-		<td>
-			<img src="./siteweb_files/index_03.gif" width="22" height="233" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="./siteweb_files/index_04.gif" width="20" height="52" alt=""></td>
-		<td>
-			<a href="https://jodoin.github.io/index.html"><img src="./siteweb_files/index_05.gif" width="63" height="52" alt=""></a></td>
-		<td>
-			<a href="https://jodoin.github.io/cv.html"><img src="./siteweb_files/index_06.gif" width="37" height="52" alt=""></a></td>
-		<td>
-			<a href="https://jodoin.github.io/teaching.html"><img src="./siteweb_files/index_07.gif" width="91" height="52" alt=""></a></td>
-		<td>
-			<a href="https://jodoin.github.io/publications.html"><img src="./siteweb_files/index_08.gif" width="118" height="52" alt=""></a></td>
-		<td>
-			<a href="https://jodoin.github.io/projects.html"><img src="./siteweb_files/index_09.gif" width="87" height="52" alt=""></a></td>
-		<td>
-			<a href="https://jodoin.github.io/presentations.html"><img src="./siteweb_files/index_10.gif" width="131" height="52" alt=""></a></td>
-		<td>
-			<a href="https://jodoin.github.io/contact.html"><img src="./siteweb_files/index_11.gif" width="84" height="52" alt=""></a></td>
-		<td>
-			<img src="./siteweb_files/index_12.jpg" width="368" height="52" alt=""></td>
-		<td>
-			<img src="./siteweb_files/index_13.gif" width="22" height="52" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="./siteweb_files/index_14.gif" width="20" height="24" alt=""></td>
-		<td colspan="8">
-			<img src="./siteweb_files/index_15.gif" width="979" height="24" alt=""></td>
-		<td>
-			<img src="./siteweb_files/index_16.gif" width="22" height="24" alt=""></td>
-	</tr>
-
-	<tr>
-		<td width="20">
-			</td>
-		<td colspan="8">
-		<center>
-		<table id="Tableau_01" width="965" height="20" border="1" cellpadding="0" cellspacing="0" bordercolor="cbcbcb" bgcolor="#f8f8f8">
-<tbody><tr><td>
-<center>
-		<table id="Tableau_02" width="870" height="15" border="0" cellpadding="0" cellspacing="20" bordercolor="cbcbcb" bgcolor="#f8f8f8">
-			<tbody><tr>
-				
-			<td width="600"> <font size="5" color="#89bc23"> IFT-780 - Réseaux neuronaux</font> 
-			
-			</td>
-			
-			
-			
-
-			</tr>
-			</tbody></table>
-			</center>
-			
-			
-			</td></tr></tbody></table>
-			
-			
-			<br><br>
-			
-			<table id="Tableau_03" width="940" border="0" cellpadding="0" cellspacing="20" bordercolor="cbcbcb" bgcolor="#ffffff">
-			<tbody><tr><td align="left" valign="top">
-			
-
-			<font size="4"><b>Objectifs du cours</b></font><br>
-			<hr align="left" width="85%">
-			
-<p align="justify">Apprentissage supervisé par réseaux de neurones : classification et régression avec réseaux à propagation avant et prédiction de cibles.  Réseaux de neurones classiques : perceptron multi-couches et régression logistique. Réseaux à convolution et architectures profondes ("deep learning") modernes : VGG, InceptionNet, ResNet, UNet, etc.  Applications à l'imagerie : reconnaissance, segmentation, localisation, transfert de style, etc.  Réseaux de neurones récurrents et
+<h3 class="section-header">Objectifs</h3>
+        <p align="justify">Apprentissage supervisé par réseaux de neurones : classification et régression avec réseaux à propagation avant et prédiction de cibles.  Réseaux de neurones classiques : perceptron multi-couches et régression logistique. Réseaux à convolution et architectures profondes ("deep learning") modernes : VGG, InceptionNet, ResNet, UNet, etc.  Applications à l'imagerie : reconnaissance, segmentation, localisation, transfert de style, etc.  Réseaux de neurones récurrents et
 applications à l'analyse de texte et d'images.  Modèles génératifs adversaires et réseaux de neurones non-supervisés : auto-encodeurs et auto-encodeurs variationnels.  Bonnes pratiques : transfert d'entrainement, augmentation de données, normalisation, méthodes d'entrainement modernes, visualisation.  Concepts avancés: modèles d'attention, autoML, compression, convolution dilatées. 
 
-</p>
+<h3 class="section-header">Manuel</h3>
 
-
-			<br><font size="i"><b>Manuel</b></font><br>
-			<hr align="left" width="85%">
 			
 <p>
 Il est possible de réussir le cours sans acheter un manuel de référence.  Cependant, il peut être avantageux d'en faire l'achat car le cours s'appuie en bonne partie sur deux livres à savoir :  <a href="https://www.amazon.ca/-/fr/Ian-Goodfellow/dp/0262035618/ref=sr_1_1?__mk_fr_CA=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=deep+learning&qid=1573614569&s=books&sr=1-1">Deep learning</a> de Goodfellow, Bengio et Courville ainsi que <a
@@ -189,8 +150,7 @@ Il est possible de réussir le cours sans acheter un manuel de référence.  Cep
     Pour ces et celles qui ne rechignent pas à l'idée de lire un livre sur un écran d'ordinateur, ceux deux manuels sont disponibles en format pdf: <a href="http://www.deeplearningbook.org"> ici </a>et <a href="https://jodoin.github.io/cours/ift603/BishopBook.pdf"> et ici.</a>
 </p>
 
-			<br><font size="4"><b>Méthode pédagogique</b></font><br>
-			<hr align="left" width="85%">
+<h3 class="section-header">Méthode pédagogique</h3>
 			
 <p>
 La méthode pédagogique pour ce cours est similaire à celle des autres cours au cycles supérieurs.  Ainsi, à chaque semaine sera dispensée une séance magistrale de 3 heures.  Par contre, à quelques reprises, nous passerons 1 à 2 heures au laboratoire afin de se familiariser avec le code informatique des travaux pratiques.  De plus, dans les 2 ou 3 dernières semaines de la session, les séances magistrales seront remplacées par des présentations orales étudiantes.  
@@ -200,12 +160,10 @@ Il est à noter que ce cours est à l'intention des élèves ayant des <b>bases 
 
 </p>
 
-
-			<br><font size="4"><b>Notes de cours </b></font><br>
-
-			<hr align="left" width="95%">
-
-	<table cellspacing="0" width="700" border="1">
+        <h3 class="section-header">Notes de cours</h3> 
+        
+        
+	<table cellspacing="0" style="width: 100%;" border="1">
 	      <tbody><tr bgcolor="#999999">
         <td width="100px" align="center"><font color="#000"><b>Semaine</b></font></td> 
 		<td width="455px" align="center"><font color="#000"><b>Contenu</b></font></td> 
@@ -368,20 +326,18 @@ Goodfellow : 9.0 à 9.5
         </tr>
 -->
 		</tbody></table>
-<!--
-		<br><br><font size="4"><b>Séances pratiques Calcul Canada</b></font><br>
-		Le tutoriel des séances pratiques est disponible <a href="https://github.com/lemairecarl/atelier-dl-cc">ICI</a>.<br>
-		
-		FAQ sur les serveurs de calcul Canada <a href="https://gist.github.com/lemairecarl/5f0bd917d29e56f0a131e8ba933b52f2">ICI</a>.
--->
-<br><br><font size="4"><b>Présentations orales </font></b>  voir le plan de cours et <a href="notes/presentation_orale.pdf">le document que voici</a> pour plus de  détails dont les critères d'évaluation. La date limite pour soumettre le sujet de votre présentation est le <b> 21 février 2025</b>.  Aussi, la date limite pour soumettre votre présentation est le <b>2 avril 2025</b>.  N'oubliez pas de remettre également votre <b>formulaire d'intégrité</b> ainsi que votre <b>agenda d'équipe.</b> </font>  
+        
+                <h3 class="section-header">Présentations orales</h3>
+                
+        Voir le plan de cours et <a href="notes/presentation_orale.pdf">le document que voici</a> pour plus de  détails dont les critères d'évaluation. La date limite pour soumettre le sujet de votre présentation est le <b> 21 février 2025</b>.  Aussi, la date limite pour soumettre votre présentation est le <b>2 avril 2025</b>.  N'oubliez pas de remettre également votre <b>formulaire d'intégrité</b> ainsi que votre <b>agenda d'équipe.</b> </font>  
 		<br> Les présentations orales 2025 sont <a href="https://drive.google.com/file/d/1SYLDDNjzJVvhhDH4TbmoCGufHhC4-SVc/view?usp=sharing"> disponibles ici</a> et le sondage pour évaluer la dynamique de votre équipe est <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkCJBJ1CQQLHn6NUf5nyytgKs-O-UBZ5LWmVQYay2rqFIo7g/viewform?usp=dialog"> ICI </a> <br>  	
- 
-		 <br><br><font size="4"><b>Travaux Pratiques</b></font><br>
-			<hr align="left" width="95%">
+
+        
+        
+        <h3 class="section-header">Travaux Pratiques</h3>
 			
-			Veuillez utiliser <b><a href="https://turnin.dinf.usherbrooke.ca/">turninweb</a></b> pour soumettre vos travaux. Tout retard ou erreur de remise entraînera une pénalité de 10 points par jour et entraîner une note de 0 après 5 jours de retard.  <br>
-		Veuillez également utiliser la plateforme de développement "gitlab" de l'Université.  Pour ce faire, connectez-vous une première fois à <a href="https://depot.dinf.usherbrooke.ca/"> depot.dinf.usherbrooke.ca </a> et 12 heures plus tard vous pourrez commencer à travailler.  <br><br>
+			Veuillez utiliser <b><a href="https://turnin.dinf.usherbrooke.ca/">turninweb</a></b> pour soumettre vos travaux. Tout retard ou erreur de remise entraînera une pénalité de 10 points par jour et entraîner une note de 0 après 5 jours de retard.  
+		Veuillez également utiliser la plateforme de développement "gitlab" de l'Université.  Pour ce faire, connectez-vous une première fois à <a href="https://depot.dinf.usherbrooke.ca/"> depot.dinf.usherbrooke.ca </a>.  <br><br>
 
 		Pour connaître vos <font="red"> <b>partenaires d'équipes</a></font>, veuillez consulter le <a href="https://docs.google.com/spreadsheets/d/15_T0Q3wIXvGsZH4p_5J50POO1_2uSdgIg0rMy1vFrlw/edit?usp=sharing">document que voici</a>.
 		<br><br>
@@ -392,84 +348,83 @@ Goodfellow : 9.0 à 9.5
 
 	<b>NOTE IMPORTANTE 4</b> : veuillez bien utiliser git car une mauvaise utilisation pourrait entraîner une <b> perte de points </b>.<br><br>
 
-<table border="0" cellpadding="2" cellspacing="2" width="700" >
 
+<table class="resource-table" style="width: 100%;">
     <tbody>
-    <tr valign="top"> <td width="70">Setup</td> <td> 
-        <a href="https://jodoin.github.io/cours/ift603/demos/python_setup.pdf"> Aide à la mise sur pied d'un environnement virtuel python sous Linux</a>
-    </td><td> 
-	<a href="https://jodoin.github.io/cours/ift603/demos/requirements.txt">requirements.txt</a><br>
-	<a href="https://jodoin.github.io/cours/ift603/demos/bashrc.txt">bashrc.txt</a><br> 
-    </td></tr>
-    
-    <tr valign="top"> <td width="70">Tp1</td> <td><a href="https://jodoin.github.io/cours/ift780/demos/tp1/tp1.pdf">Description (remise : 14 février)</a><br>
-	<a href="https://jodoin.github.io/cours/ift603/softmax_grad.html"> Softmax et gradient : kit de survie! </a> </td><td> 
-	<a href="https://jodoin.github.io/cours/ift780/demos/tp1/progTP1.tar.gz"> code</a><br> 
-	<a href="https://docs.google.com/forms/d/e/1FAIpQLSegDlVH9t6qEn97Ys94j6GTUCQIPRaNqkmhc9uvj1nTCLmcJA/viewform?usp=dialog"> sondage</a><br>
-    </td></tr>
-	<!--    <tr valign="top"> <td width="70"></td> <td><a href="https://jodoin.github.io/cours/ift603/softmax_grad.html"> Softmax et gradient : kit de survie! </a> </td><td> </td> </tr> -->
-    
-    <tr valign="top"> <td width="70">Tp2</td> <td><a href="https://jodoin.github.io/cours/ift780/demos/tp2/tp2.pdf">Description (remise : 7 mars)</a> </td><td> 
-	<a href="https://jodoin.github.io/cours/ift780/demos/tp2/progTP2.tar.gz"> code</a><br>
-	<a href="https://docs.google.com/forms/d/e/1FAIpQLSf6JTNiMRc294tew9LlBZ81Qfb4aKTn9_3DQq8jbO-1B9Md0A/viewform?usp=dialog"> sondage</a>
-    </td></tr>
-    
-    <tr valign="top"> <td width="70">Tp3</td> <td><a href="https://jodoin.github.io/cours/ift780/demos/tp3/tp3.pdf">Description (remise : 21 mars</a> </td><td> 
-	<a href="https://jodoin.github.io/cours/ift780/demos/tp3/progTP3.tar.gz"> code</a><br> 
-	<a href="https://drive.google.com/file/d/1TwZ7JhVPPPONWNqpZX9Rpal8_aExJ-7U/view?usp=drive_link"> Fichier à copier dans le répertoire weights/ </a><br>
-	<a href="https://docs.google.com/document/d/17a74NFtdX_-b5uBdkMVdkyxEAFsv3-lqfldhSgaq1ro/edit?usp=sharing"> Formulaire réponses</a><br>
-	<a href="https://docs.google.com/forms/d/e/1FAIpQLSf_xWEsH8wpsuhG04V7mLq-V1uJBcfXmUf2A133QXOT4nxLoQ/viewform?usp=dialog"> sondage</a>
-    </td></tr>
-    
-    <tr valign="top"> <td width="70">Tp4</td> <td><a href="https://jodoin.github.io/cours/ift780/demos/tp4/tp4.pdf">Description (remise : 11 avril)</a> </td><td> 
-	<a href="https://jodoin.github.io/cours/ift780/demos/tp4/progTP4.tar.gz"> code</a> 
-	<br><a href="https://drive.google.com/file/d/1DAYgtBNeqXcmMQjkAH4njYYm6vmvXpel/view?usp=share_link">Données à copier dans le répertoire data/</a>
-	<br><a href="https://drive.google.com/file/d/1_RPArH2CIwiuJ4tJCKf5-yuLPHyFx5zr/view?usp=sharing"> Model préentraîné, à copier dans le répertoire src/</a>
-	<br><a href="https://docs.google.com/forms/d/e/1FAIpQLSctSYzT4qbZCIFvvDex-7ZmrAZoRtgNYm8NfIpLqmOe8sNzTg/viewform?usp=dialog"> sondage</a>
-    </td></tr>
-    
-    <tr valign="top"> <td width="70">Examens </td> <td><a href="https://jodoin.github.io/cours/ift780/intra.pdf">  Intra</a> <br> <a href="https://jodoin.github.io/cours/ift780/final.pdf">  Final</a> 
-		    </td></tr>
-
-
-
+        <tr valign="top">
+            <td style="font-weight: bold; width: 100px;">Setup</td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift603/demos/python_setup.pdf">Aide à la mise sur pied d'un environnement virtuel python sous Linux</a>
+            </td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift603/demos/requirements.txt">requirements.txt</a><br>
+                <a href="https://jodoin.github.io/cours/ift603/demos/bashrc.txt">bashrc.txt</a>
+            </td>
+        </tr>
+        
+        <tr valign="top">
+            <td style="font-weight: bold;">Tp1</td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift780/demos/tp1/tp1.pdf">Description (remise : 14 février)</a><br>
+                <a href="https://jodoin.github.io/cours/ift603/softmax_grad.html">Softmax et gradient : kit de survie!</a>
+            </td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift780/demos/tp1/progTP1.tar.gz">code</a><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSegDlVH9t6qEn97Ys94j6GTUCQIPRaNqkmhc9uvj1nTCLmcJA/viewform?usp=dialog">sondage</a>
+            </td>
+        </tr>
+        
+        <tr valign="top">
+            <td style="font-weight: bold;">Tp2</td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift780/demos/tp2/tp2.pdf">Description (remise : 7 mars)</a>
+            </td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift780/demos/tp2/progTP2.tar.gz">code</a><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6JTNiMRc294tew9LlBZ81Qfb4aKTn9_3DQq8jbO-1B9Md0A/viewform?usp=dialog">sondage</a>
+            </td>
+        </tr>
+        
+        <tr valign="top">
+            <td style="font-weight: bold;">Tp3</td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift780/demos/tp3/tp3.pdf">Description (remise : 21 mars)</a>
+            </td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift780/demos/tp3/progTP3.tar.gz">code</a><br>
+                <a href="https://drive.google.com/file/d/1TwZ7JhVPPPONWNqpZX9Rpal8_aExJ-7U/view?usp=drive_link">Fichier à copier dans weights/</a><br>
+                <a href="https://docs.google.com/document/d/17a74NFtdX_-b5uBdkMVdkyxEAFsv3-lqfldhSgaq1ro/edit?usp=sharing">Formulaire réponses</a><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_xWEsH8wpsuhG04V7mLq-V1uJBcfXmUf2A133QXOT4nxLoQ/viewform?usp=dialog">sondage</a>
+            </td>
+        </tr>
+        
+        <tr valign="top">
+            <td style="font-weight: bold;">Tp4</td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift780/demos/tp4/tp4.pdf">Description (remise : 11 avril)</a>
+            </td>
+            <td>
+                <a href="https://jodoin.github.io/cours/ift780/demos/tp4/progTP4.tar.gz">code</a><br>
+                <a href="https://drive.google.com/file/d/1DAYgtBNeqXcmMQjkAH4njYYm6vmvXpel/view?usp=share_link">Données à copier dans data/</a><br>
+                <a href="https://drive.google.com/file/d/1_RPArH2CIwiuJ4tJCKf5-yuLPHyFx5zr/view?usp=sharing">Model préentraîné, à copier dans src/</a><br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSctSYzT4qbZCIFvvDex-7ZmrAZoRtgNYm8NfIpLqmOe8sNzTg/viewform?usp=dialog">sondage</a>
+            </td>
+        </tr>
     </tbody>
-
 </table>
 
-			</td><td width="240" valign="top">  <font color="#000000"> <b>Sommaire</b></font><hr align="left" width="70%">
-
-			<font color="#89bc23" size="3"> Session</font><br>
-			Hiver 2025 <br><br>
-			<font color="#89bc23" size="3"> Professeur</font><br>
-			Pierre-Marc Jodoin<br><br>
-
-			<font color="#89bc23" size="3"> Correcteur</font><br>
-            <a href="mailto:Jeremi.Levesque@USherbrooke.ca">Jeremi Lévesque</a>
-	    
-            <br><br>
-
-			<font color="#89bc23" size="3"> Périodes de cours</font><br>
-			Mardi de 15h30 à 17h20<br>
-			Jeudi de 16h30 à 17h20<br><br>
+        <h3 class="section-header">Travaux Pratiques</h3>
+        
+        <a href="https://jodoin.github.io/cours/ift780/intra.pdf">  Intra</a> <br> 
+        <a href="https://jodoin.github.io/cours/ift780/final.pdf">  Final</a> 
 		
-			<font color="#89bc23" size="3"> Local</font><br>
-		        D3-2035<br><br>
-
-		
-			<font color="#89bc23" size="3"> Périodes de disponibilités</font><br>
-			Du lundi au vendredi de 9h30 à 17h30 <br><br>
 
 
-			<font color="#89bc23" size="3"> Horaire et plan de cours</font><br>
-			<a href="https://plandecours.dinf.usherbrooke.ca/pdc/2025-1/IFT780/51/">(plan ift780)</a>  <br><br>
- 
-  </td></tr>
-
-			</tbody></table>
-
-			</center>
-<font size="1">	Created by Pierre-Marc Jodoin</font>
-			</td>
-		</tr></tbody></table>
-</body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
+    <footer>
+        <div class="container">
+            <p>Instructeur : <a href="../../index.html">Pierre-Marc Jodoin</a> | Courriel : <a href="mailto:Pierre-Marc.Jodoin@usherbrooke.ca">Pierre-Marc.Jodoin@usherbrooke.ca</a></p>
+            &copy; 2025 Université de Sherbrooke.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,126 +1,65 @@
-
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>siteweb</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style>
-#map_canvas {
-        width: 500px;
-        height: 400px;
-      }
-body {color:#464646;font-family:sans-serif;}
-hr {
- color: #cbcbcb;
-}
-</style>
-
- <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-      function initialize() {
-        var map_canvas = document.getElementById('map_canvas');
-        var map_options = {
-          center: new google.maps.LatLng(44.5403, -78.5463),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(map_canvas, map_options)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre-Marc Jodoin | Contact</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-<!-- Save for Web Slices (siteweb.psd) -->
-<table id="Tableau_01" width="1021" height="309" border="0" cellpadding="0" cellspacing="0">
-	<tr>
-		<td>
-			<img src="images/index_01.jpg" width="20" height="233" alt=""></td>
-		<td colspan="8">
-			<img src="images/index_02.gif" width="979" height="233" alt=""></td>
-		<td>
-			<img src="images/index_03.gif" width="22" height="233" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="images/index_04.gif" width="20" height="52" alt=""></td>
-		<td>
-			<a href="index.html"><img src="images/index_05.gif" width="63" height="52" alt=""></a></td>
-		<td>
-			<a href="cv.html"><img src="images/index_06.gif" width="37" height="52" alt=""></a></td>
-		<td>
-			<a href="teaching.html"><img src="images/index_07.gif" width="91" height="52" alt=""></a></td>
-		<td>
-			<a href="publications.html"><img src="images/index_08.gif" width="118" height="52" alt=""></a></td>
-		<td>
-			<a href="projects.html"><img src="images/index_09.gif" width="87" height="52" alt=""></a></td>
-		<td>
-			<a href="presentations.html"><img src="images/index_10.gif" width="131" height="52" alt=""></a></td>
-		<td>
-			<a href="contact.html"><img src="images/index_11.gif" width="84" height="52" alt=""></a></td>
-		<td>
-			<img src="images/index_12.jpg" width="368" height="52" alt=""></td>
-		<td>
-			<img src="images/index_13.gif" width="22" height="52" alt=""></td>
-	</tr>
-	<tr>
-		<td>
-			<img src="images/index_14.gif" width="20" height="24" alt=""></td>
-		<td colspan="8">
-			<img src="images/index_15.gif" width="979" height="24" alt=""></td>
-		<td>
-			<img src="images/index_16.gif" width="22" height="24" alt=""></td>
-	</tr>
+<body>
+    <header>
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">Pierre-Marc Jodoin, Ph.D.</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="publications.html"  >Publications</a>
+                <a href="openscience.html">Open Science</a>
+                <a href="cv.html">CV</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="https://vitalab.github.io" target="_blank">My lab</a>
+            </div>
+        </div>
+    </header>
 
-	<tr>
-		<td width="20">
-			</td>
-		<td colspan="8">
-		<center>
-		<table id="Tableau_01" width="965" height="200" border="1" cellpadding="0" cellspacing="0" BORDERCOLOR="cbcbcb" bgcolor="#f8f8f8">
-<tr><td>
-<center>
-		<table id="Tableau_02" width="870" height="150" border="0" cellpadding="0" cellspacing="20" BORDERCOLOR="cbcbcb" bgcolor="#f8f8f8">
-			<tr>
-				
-			<td width="600"> <font size="7" color="#89bc23"> Get in touch</b></font> <br><br>
-			<p>2500 Boul de l'Université<br>
-Sherbrooke, Qc, Canada<br>
-J1K 0A5<br><br>
-pierre-marc.jodoin [at] usherbrooke.ca<br>
-Tel: (1) 819-821-8000 x62025<br>
-Fax: (1) 819-821-8200</p>
+    <section class="container">
+        <h2>Get in Touch</h2>
+        
+        <div class="card-grid">
+            <div class="card">
+                <h3>Office Address</h3>
+                <p>
+                    <strong>Département d'Informatique</strong><br>
+                    Université de Sherbrooke<br>
+                    2500, boulevard de l'Université<br>
+                    Sherbrooke (Québec), J1K 2R1<br>
+                    Canada
+                </p>
+            </div>
+            <div class="card">
+                <h3>Contact Details</h3>
+                <p>
+                    <strong>Email:</strong> <a href="mailto:Pierre-Marc.Jodoin@usherbrooke.ca">Pierre-Marc.Jodoin@usherbrooke.ca</a><br>
+                    <strong>Office Phone:</strong> (1) 819-821-8000 ext. 62025<br>
+                    <strong>Lab Website:</strong> <a href="https://vitalab.github.io" target="_blank">vitalab.github.io</a>
+                </p>
+            </div>
+        </div>
 
-<a href="https://www.facebook.com/pierremarc.jodoin"><img alt="" src="images/facebook.jpg" /></a>
-<img alt="" src="images/twitter.jpg" />
-<a href="http://www.linkedin.com/pub/pierre-marc-jodoin/20/417/927"><img alt="" src="images/linkedin.jpg" /></a>
+        <h2 style="margin-top: 3rem;">Professional Links</h2>
+        <p>Connect with me on these platforms for updates on research and publications:</p>
+        <div style="display: flex; gap: 20px; margin-top: 20px;">
+            <a href="https://scholar.google.com/citations?user=JM9-OOsAAAAJ&hl=en" target="_blank" style="font-weight: bold;">Google Scholar</a>
+            <a href="https://www.researchgate.net/profile/Pierre-Marc-Jodoin" target="_blank" style="font-weight: bold;">ResearchGate</a>
+            <a href="https://dblp.org/pid/16/6189" target="_blank" style="font-weight: bold;">DBLP</a>
+            <a href="https://github.com/jodoin" target="_blank" style="font-weight: bold;">GitHub</a>
+        </div>
+    </section>
 
-			</td><td>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5605.197125042166!2d-71.9308915!3d45.3770952!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3a2b725d3b5d10f!2sUniversity+of+Sherbrooke!5e0!3m2!1sen!2sca!4v1406895422253" width="400" height="300" frameborder="0" style="border:0"></iframe>
-			</td>
-			</center>
-			
-			</td>
-
-			</tr>
-			</table>
-			</center>
-			
-			</td></tr></table>
-			<br><br><br><br>
-			<hr>
-			</center>
-<font size="1">	Created by Pierre-Marc Jodoin</font>
-			<div align="right">
-<a href="https://www.facebook.com/pierremarc.jodoin"><img alt="" width="15" src="images/facebook.jpg" /></a>
-<img alt=""width="15" src="images/twitter.jpg" />
-<a href="http://www.linkedin.com/pub/pierre-marc-jodoin/20/417/927"><img alt="" width="15" src="images/linkedin.jpg" /></a>
-			</div>
-			</td>
-		<td width="22>
-			</td>
-	</tr>
-	
-</table>
-<!-- End Save for Web Slices -->
+    <footer>
+        <div class="container">
+            &copy; 2025 Pierre-Marc Jodoin. | Site created using a modern academic template.
+        </div>
+    </footer>
 </body>
 </html>

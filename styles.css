@@ -1,0 +1,155 @@
+:root {
+    --primary: #004e36; /* UdeS Green-ish tone */
+    --secondary: #2c3e50; /* Dark Blue for text/headings */
+    --accent: #3498db; /* Blue for links/highlights */
+    --light: #f8f9fa;
+    --text: #333;
+    --gray: #6c757d;
+}
+
+/* Base */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+h1, h2, h3 { color: var(--secondary); line-height: 1.2; }
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent);
+    display: inline-block;
+}
+a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--primary); }
+
+/* Header and Navigation */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+.nav-links a:hover, .nav-links a.active {
+    color: white;
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Hero Section (Specific to index.html) */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x400/2c3e50/ffffff?text=AI+for+Medical+Imaging') no-repeat center center/cover;
+    color: white;
+    padding: 4rem 0 6rem; /* Adjusted top padding */
+    text-align: center;
+}
+/* NEW STYLE FOR PROFILE PHOTO */
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid white; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+/* END NEW STYLE */
+
+/* Stats Grid (MODIFIED FOR SMALLER TEXT) */
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0; 
+    background: var(--light);
+}
+.stat-item {
+    text-align: center;
+}
+/* Smaller H3 for stats */
+.stat-item h3 { font-size: 2.2rem; margin: 0; color: var(--primary); } 
+/* Smaller font for context */
+.stat-item p { margin: 0; color: var(--gray); text-transform: uppercase; font-size: 0.8rem; font-weight: 600; } 
+
+/* Card Component (Used for Research/Open Science) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+.card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border-color: var(--accent);
+}
+.tag {
+    display: inline-block;
+    background: #e1f5fe;
+    color: #0288d1;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+.list-unstyled li {
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+footer a { color: var(--accent); }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-flex { flex-direction: column; }
+    .nav-links { margin-top: 10px; }
+    .nav-links a { margin: 0 10px; }
+    .hero h1 { font-size: 2.5rem; }
+    .stats-grid { flex-direction: column; gap: 20px; padding: 2rem 0; }
+    .stat-item h3 { font-size: 2rem; }
+}
