@@ -33,6 +33,32 @@
             word-break: break-word;
             margin-bottom: 5px;
         }
+	
+	
+	 /* Summary Box Styling (Bannière du haut pleine largeur) */
+        .course-summary-box {
+            background-color: #f8f8f8; 
+            border: 1px solid #cbcbcb;
+            padding: 20px;
+            margin-bottom: 30px;
+            margin-top: 20px;
+        }
+        .summary-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 30px; /* Écart vertical et horizontal */
+        }
+        .summary-item {
+            flex: 1 1 auto; /* Permet aux éléments de s'ajuster */
+            min-width: 150px; 
+        }
+        .summary-item strong {
+            color: #2a6496; /* Couleur pour les étiquettes du sommaire */
+            display: block;
+            margin-bottom: 3px;
+        }
+
+	
         /* Style for the sidebar summary */
         .course-summary {
             background-color: #f8f8f8;
@@ -76,33 +102,43 @@
     </header>
 
     <section class="container">
-        <span class="tag">Cours de premier et deuxième cycle</span>
-        <h2>IFT 603-712: Techniques d'apprentissage</h2>
-
-        <div class="course-summary">
-            <dl>
-                <dt>Session</dt>
-                <dd>Hiver 2026</dd>
-                
-                <dt>Professeur</dt>
-                <dd>Pierre-Marc Jodoin</dd>
-
-                <dt>Correcteur</dt>
-                <dd><a href="mailto:thierry.judge@usherbrooke.ca">Thierry Judge</a></dd>
-                
-                <dt>Périodes de cours</dt>
-                <dd>Mercredi de 13h30 à 14h20, Vendredi de 13h30 à 15h20</dd>
-                
-                <dt>Local</dt>
-                <dd>Mercredi : à déterminer, Vendredi : à déterminer</dd>
-
-                <dt>Périodes de disponibilités</dt>
-                <dd>Du lundi au vendredi de 9h30 à 17h30</dd>
-
-                <dt>Horaire et plan de cours</dt>
-                <dd><a href="https://plandecours.dinf.usherbrooke.ca/pdc/2026-1/IFT603/1/">(plan ift603-712)</a></dd>
-            </dl>
+    
+    <span class="tag">Cours de premier et deuxeme cycle</span>
+        <h1 class="course-title">IFT 603-712: Techniques d'apprentissage</h1>
+        
+        <div class="course-summary-box">
+            <h3>Sommaire</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <strong>Session</strong>
+                    Hiver 2026
+                </div>
+                <div class="summary-item">
+                    <strong>Professeur</strong>
+                    Pierre-Marc Jodoin
+                </div>
+                <div class="summary-item">
+                    <strong>Correcteur</strong>
+                    <a href="mailto:Thierry.Judge@USherbrooke.ca">Thierry Judge</a>
+                </div>
+                <div class="summary-item">
+                    <strong>Périodes de cours</strong>
+                    Mardi de 13h30 à 14h20 <br>
+                    Vendredi de 13h30 à 15h20
+                </div>
+                <div class="summary-item">
+                    <strong>Local</strong>
+                    D3-2039
+                </div>
+                <div class="summary-item">
+                    <strong>Plan de cours</strong>
+                    <a href="https://plandecours.dinf.usherbrooke.ca/pdc/2026-1/IFT603/1/">Lien vers le Plan de cours (PDF) &rarr;</a>
+                </div>
+            </div>
         </div>
+ 
+
+        
         
         <h3 style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">Objectifs du cours</h3>
         
